@@ -12,5 +12,5 @@ Python 2.7.6 (default, Jun 22 2015, 17:58:13)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import boto3
 >>> print boto3.__version__
-2.39.0
+1.4.0
 
