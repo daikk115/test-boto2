@@ -10,7 +10,7 @@ stack@bkcloud:~/test-boto3$ python
 Python 2.7.6 (default, Jun 22 2015, 17:58:13) 
 [GCC 4.8.2] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
->>> import boto
->>> print boto.__version__
+>>> import boto3
+>>> print boto3.__version__
 2.39.0
 
