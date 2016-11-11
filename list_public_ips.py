@@ -11,7 +11,10 @@ try:
      results = client.describe_addresses().get('Addresses')
      return_format = []
      for ip in results:
-         return_format.append(ip.get('PublicIp'))
+         return_format.append({
+                'public_ip': ip.get('PublicIp'),
+                'id': ip.get('AllocationId')
+         })
      print return_format
 except ClientError as exc:
     print type(exc)
