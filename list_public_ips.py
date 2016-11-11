@@ -8,8 +8,11 @@ client = boto3.client('ec2',
 		endpoint_url='http://192.168.122.75:8788')
 
 try:
-     output = client.describe_addresses()
-     print output
+     results = client.describe_addresses().get('Addresses')
+     return_format = []
+     for ip in results:
+         return_format.append(ip.get('PublicIp'))
+     print return_format
 except ClientError as exc:
     print type(exc)
 
