@@ -8,7 +8,7 @@ client = boto3.client('ec2',
                 region_name='RegionOne',
 		endpoint_url='http://192.168.122.75:8788')
 
-output = client.describe_instances()
+output = client.describe_instances(InstanceIds=['i-72827591'])
 
 output = output.get("Reservations")[0].get("Instances")[0]
 result = {}
