@@ -10,8 +10,12 @@ client = boto3.client('ec2',
 
 output = client.describe_instances()
 
+output = output.get("Reservations")[0].get("Instances")[0]
+result = {}
+result['PrivateIp'] = output.get("PrivateIpAddress")
+result['PublicIp'] = output.get("PublicIpAddress")
 pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(output)
+pp.pprint(result)
 
 """
 Result:
