@@ -5,8 +5,8 @@ client = boto3.client('ec2',
                 region_name='RegionOne',
                 endpoint_url=endpoint)
 
-vpcs = client.describe_vpcs().get('Vpcs')
-for vpc in vpcs:
+subnets = client.describe_subnets().get('Subnets')
+for subnet in subnets:
     print "deleted"
-    print client.delete_vpc(VpcId=vpc['VpcId'])
+    print client.delete_subnet(SubnetId=subnet['SubnetId'])
 
