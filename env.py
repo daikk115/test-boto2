@@ -1,0 +1,3 @@
+access='d31db27577bd48089b623d5fddac576f'
+secret='298cf451d203419e852b432cd688ec44'
+endpoint='http://192.168.122.143:8788'
