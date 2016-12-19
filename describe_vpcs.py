@@ -1,3 +1,4 @@
+from env import *
 import boto3
 
 from env import *
@@ -8,7 +9,7 @@ client = boto3.client('ec2',
                 region_name='RegionOne',
                 endpoint_url=endpoint)
 
-output = client.describe_vpcs()
+output = client.describe_vpcs(VpcIds=['vpc-39283a02'])
 
 print output
 
