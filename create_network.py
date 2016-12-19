@@ -1,3 +1,4 @@
+from env import *
 import boto3
 
 from env import *
